@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://derp-bear.herokuapp.com/" />
+<title>Homework1Script1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Homework1Script1</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/forms/basic_form_example</td>
+	<td></td>
+</tr>
+<!--1. Check all elements.-->
+<tr>
+	<td>verifyText</td>
+	<td>css=legend</td>
+	<td>Please Fill in the Form below</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=fieldset &gt; legend</td>
+	<td>Your Information</td>
+</tr>
+<!--Checking the First Name element:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=label</td>
+	<td>First Name</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=first_name</td>
+	<td>First Name</td>
+</tr>
+<!--Checking the Lastt Name element:-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='your_information']/fieldset/ol/li[2]/label</td>
+	<td>Last Name</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=last_name</td>
+	<td>Last Name</td>
+</tr>
+<!--Checking the Email element:-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='your_information']/fieldset/ol/li[3]/label</td>
+	<td>Email</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=email</td>
+	<td>Email</td>
+</tr>
+<!--Checking the Website element:-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='your_information']/fieldset/ol/li[4]/label</td>
+	<td>Website</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=website_url</td>
+	<td>Website</td>
+</tr>
+<!--Checking the Pet Selection element:-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='your_information']/fieldset/ol/li[5]/label</td>
+	<td>Select a Pet</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//button[@id='pet_select']</td>
+	<td>Select a Pet</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//button[@id='pet_select']</td>
+	<td>Cat</td>
+</tr>
+<!--Checking the Date element:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#date_information &gt; fieldset &gt; legend</td>
+	<td>Date</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#date_information &gt; fieldset &gt; ol &gt; li.form-group &gt; label</td>
+	<td>Date of Birth</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=date_of_birth</td>
+	<td>Date of Birth</td>
+</tr>
+<!--Checking the Gender element:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#sex_information &gt; fieldset &gt; legend</td>
+	<td>What is your Sex?</td>
+</tr>
+<!--Checking the Radio button of Male:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=label.radio.radio-inline</td>
+	<td>Male</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=span.second-icon.fui-radio-checked</td>
+	<td></td>
+</tr>
+<!--Checking the Radio button of Female:-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='sex_information']/fieldset/ol/li/div/div/label[2]</td>
+	<td>Female</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//li[@id='sex_information']/fieldset/ol/li/div/div/label[2]/span/span[2]</td>
+	<td></td>
+</tr>
+<!--Checking the How To Get To Work element:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#transportation_example &gt; fieldset &gt; legend</td>
+	<td>How do you get to work?</td>
+</tr>
+<!--Checking the Checkbox of Bike element:-->
+<tr>
+	<td>assertText</td>
+	<td>//li[@id='transportation_example']/fieldset/ol/li/div/div/label</td>
+	<td>Bike</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=span.second-icon.fui-checkbox-checked</td>
+	<td></td>
+</tr>
+<!--Checking the Checkbox of Car element:-->
+<tr>
+	<td>assertText</td>
+	<td>//li[@id='transportation_example']/fieldset/ol/li/div/div/label[2]</td>
+	<td>Car</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//li[@id='transportation_example']/fieldset/ol/li/div/div/label[2]/span/span[2]</td>
+	<td></td>
+</tr>
+<!--Checking the Checkbox of Walk element:-->
+<tr>
+	<td>assertText</td>
+	<td>//li[@id='transportation_example']/fieldset/ol/li/div/div/label[3]</td>
+	<td>Walk</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//li[@id='transportation_example']/fieldset/ol/li/div/div/label[3]/span/span[2]</td>
+	<td></td>
+</tr>
+<!--Checking the Password Exemle element:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#password_example &gt; fieldset &gt; legend</td>
+	<td>Password Example</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#password_example &gt; fieldset &gt; ol &gt; li.form-group &gt; label</td>
+	<td>Example password</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=password_field</td>
+	<td></td>
+</tr>
+<!--Checking the Terms of Agreement elements:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#tos_example &gt; fieldset &gt; legend</td>
+	<td>Terms of Agreement</td>
+</tr>
+<!--Checking the Free Text Field element:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#tos_example &gt; fieldset &gt; ol &gt; li.form-group &gt; label</td>
+	<td>Free Text Field</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=free_text_area</td>
+	<td></td>
+</tr>
+<!--Checking the Read Only Text Field element:-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='tos_example']/fieldset/ol/li[2]/label</td>
+	<td>Read only Text Field</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=read_only_text_area</td>
+	<td>This text is read only!</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=read_only_text_area</td>
+	<td></td>
+</tr>
+<!--Checking the Hidden Field element:-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#hidden_field_example &gt; fieldset &gt; ol &gt; li.form-group &gt; label</td>
+	<td>Hidden Field</td>
+</tr>
+<!--Checking the Submit button:-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=submit_button</td>
+	<td>Submit</td>
+</tr>
+<!--2. Fill the data.-->
+<tr>
+	<td>type</td>
+	<td>id=first_name</td>
+	<td>John</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=last_name</td>
+	<td>Woodfield</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>john.woodfield@email.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=website_url</td>
+	<td>www.j-wood.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@id='pet_select']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=date_of_birth</td>
+	<td>12.24.1990</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.second-icon.fui-radio-checked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.second-icon.fui-checkbox-checked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password_field</td>
+	<td>12345qwert</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=free_text_area</td>
+	<td>My first text here.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
