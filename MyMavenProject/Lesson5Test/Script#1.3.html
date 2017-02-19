@@ -16,10 +16,32 @@
 	<td>/account/register</td>
 	<td></td>
 </tr>
+<!--Generate random Login and Email-->
+<tr>
+	<td>store</td>
+	<td>javascript{Math.random().toString(26).substring(2,8)}</td>
+	<td>login</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${login}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;user&quot;+Math.floor(Math.random()*10000)+&quot;@mail.com&quot;;}</td>
+	<td>email</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${email}</td>
+	<td></td>
+</tr>
+<!--Filling the data-->
 <tr>
 	<td>type</td>
 	<td>id=user_login</td>
-	<td>admin</td>
+	<td>${login}</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -44,7 +66,7 @@
 <tr>
 	<td>type</td>
 	<td>id=user_mail</td>
-	<td>roger.mcconner@mail.com</td>
+	<td>${email}</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -71,7 +93,6 @@
 	<td>name=commit</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.calculator.net/" />
+<title>Script#2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Script#2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/mortgage-calculator.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=chouseprice</td>
+	<td>1000000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cdownpaymentunit</td>
+	<td>label=$</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cdownpaymentunit</td>
+	<td>label=%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cloanterm</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cinterestrate</td>
+	<td>4.04</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=caddoptional</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=caddoptional</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cpropertytaxesunit</td>
+	<td>label=$</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cpropertytaxesunit</td>
+	<td>label=%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cpmi</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=choa</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=cstartmonth</td>
+	<td>label=Jan</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ More Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=cpropertytaxesincrease</td>
+	<td>0.2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=chomeinsincrease</td>
+	<td>0.3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=choainsincrease</td>
+	<td>0.2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=cothercostincrease</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=cextramonthly</td>
+	<td>650</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cextramonthlystartmonth</td>
+	<td>label=Jan</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=cextrayearly</td>
+	<td>2500</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cextrayearlystartmonth</td>
+	<td>label=Jan</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=cextraonetime</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cextraonetimestartmonth</td>
+	<td>label=Jan</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=cshowbiweekly</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=cshowbiweekly</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//h2</td>
+	<td>Monthly Pay:&nbsp;&nbsp;&nbsp;$4,864.72</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

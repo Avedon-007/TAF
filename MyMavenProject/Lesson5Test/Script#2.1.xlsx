@@ -1,0 +1,25 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://www.calculator.net/mortgage-calculator.html?chouseprice=1000000&cdownpayment=20&cdownpaymentunit=p&cloanterm=20&cinterestrate=4.04&caddoptional=1&cpropertytaxes=1.2&cpropertytaxesunit=p&chomeins=1200&cpmi=500&choa=300&cothercost=3000&cstartmonth=1&cstartyear=2017&cmoreoption=1&cpropertytaxesincrease=0.2&chomeinsincrease=0.3&choainsincrease=0.2&cothercostincrease=1&cextramonthly=650&cextramonthlystartmonth=1&cextramonthlystartyear=2017&cextrayearly=2500&cextrayearlystartmonth=1&cextrayearlystartyear=2017&cextraonetime=10000&cextraonetimestartmonth=1&cextraonetimestartyear=2017&cshowbiweekly=1&printit=0&x=53&y=9"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Monthly Pay: $4,864.72"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "With the extra payment, the loan will be paid off in 15 years and 6 months."
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
