@@ -1,5 +1,7 @@
 package MyMavenLesson5.MyMavenProject;
 
+import org.apache.poi.hssf.record.PrecisionRecord;
+
 public class EmployeeOfCompany 
 {
 	private String firstName;
@@ -10,6 +12,7 @@ public class EmployeeOfCompany
 	private String position;
 	private double salaryRate;
 	
+	public EmployeeOfCompany(){}
 	
 	public EmployeeOfCompany(String firstName, String lastName, String gender, int age, int experience, String position, double salaryRate)
 	{
@@ -71,13 +74,26 @@ public class EmployeeOfCompany
 		this.position = position;
 	}
 
-	
-	public double calculateOneDayCost(int generalWorkigDaysInMoth)
+	// This Method round decimal number. For example: 10.12345 -> 10.123
+	protected static double roundDoubleDigit(double value, int place)
 	{
-		return salaryRate/generalWorkigDaysInMoth;
+		int places = 0;
+		if (places < 0) throw new IllegalArgumentException();
+
+	    long factor = (long) Math.pow(10, places);
+	    value = value * factor;
+	    long tmp = Math.round(value);
+	    return (double) tmp / factor;
+	}
+	
+	
+	public double calculateOneDayCost(double salaryRate, int generalWorkigDaysInMoth)
+	{
+		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0!");
+		return roundDoubleDigit( (salaryRate/generalWorkigDaysInMoth) , 4);
 	}	
 	
-	public double calculateExperianceCoeff()
+	public double calculateExperianceCoeff(int experience)
 	{
 		double experianceCoeff = 0.0;
 		if(experience >= 10) experianceCoeff = 0.5;
@@ -86,9 +102,10 @@ public class EmployeeOfCompany
 		return experianceCoeff;
 	}
 		
-	public double calculeteBonus()
+	public double calculeteBonus(double salaryRate, int experience)
 	{
-		return (salaryRate * 0.5) * calculateExperianceCoeff();
+		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0!");
+		return (salaryRate * 0.5) * calculateExperianceCoeff(experience);
 	}
 	
 	public int countRealWorkigDays(int generalWorkigDaysInMoth, int sickDays, int vacationDays) 
@@ -99,6 +116,6 @@ public class EmployeeOfCompany
 	public double calculateSalary(double salaryRate, double bonus, int sickDays,  int generalWorkigDaysInMoth,
 			int realWorkigDaysInMoth,  int vacationDays)
 	{
-		return calculateOneDayCost(generalWorkigDaysInMoth) * countRealWorkigDays(generalWorkigDaysInMoth, sickDays, vacationDays) +  calculeteBonus();
+		return calculateOneDayCost(salaryRate, generalWorkigDaysInMoth) * countRealWorkigDays(generalWorkigDaysInMoth, sickDays, vacationDays) +  calculeteBonus();
 	}
 }
