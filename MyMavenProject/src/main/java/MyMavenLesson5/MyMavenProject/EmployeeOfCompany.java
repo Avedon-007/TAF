@@ -73,49 +73,64 @@ public class EmployeeOfCompany
 	public void setPosition(String position) {
 		this.position = position;
 	}
-
-	// This Method round decimal number. For example: 10.12345 -> 10.123
-	protected static double roundDoubleDigit(double value, int place)
-	{
-		int places = 0;
-		if (places < 0) throw new IllegalArgumentException();
-
-	    long factor = (long) Math.pow(10, places);
-	    value = value * factor;
-	    long tmp = Math.round(value);
-	    return (double) tmp / factor;
-	}
-	
 	
 	public double calculateOneDayCost(double salaryRate, int generalWorkigDaysInMoth)
 	{
 		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0!");
-		return roundDoubleDigit( (salaryRate/generalWorkigDaysInMoth) , 4);
+		
+		return salaryRate/generalWorkigDaysInMoth;
 	}	
 	
 	public double calculateExperianceCoeff(int experience)
 	{
 		double experianceCoeff = 0.0;
-		if(experience >= 10) experianceCoeff = 0.5;
-		else if(experience >= 0 && experience < 10)	experianceCoeff = experience/10;		 
-		else System.out.println("ERROR!!! experience value is less 0");
+		if(experience >= 9) experianceCoeff = 0.9;
+		else if(experience >= 0 && experience < 9)	experianceCoeff = experience/10;		 
+		else throw new IllegalArgumentException("ERROR!!! experience value is less 0");
+		
 		return experianceCoeff;
 	}
 		
 	public double calculeteBonus(double salaryRate, int experience)
 	{
 		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0!");
+		
 		return (salaryRate * 0.5) * calculateExperianceCoeff(experience);
 	}
 	
-	public int countRealWorkigDays(int generalWorkigDaysInMoth, int sickDays, int vacationDays) 
+	public int countRealWorkigDays(int generalWorkigDaysInMoth, int sickDaysInMonth, int vacationDaysInMoth, int missedDays) 
 	{
-		return generalWorkigDaysInMoth - sickDays - vacationDays;
+		int sumOfSickAndVacationAndMissedDays = sickDaysInMonth + vacationDaysInMoth + missedDays;
+		if(generalWorkigDaysInMoth <= 0) throw new IllegalArgumentException("The General working days in month should be more than 0!");
+		else if(generalWorkigDaysInMoth >= 24) throw new IllegalArgumentException("The General working days in month should be less than 24!");
+		else if(sickDaysInMonth < 0) throw new IllegalArgumentException("The Sickdays in month should be 0 or more!");
+		else if(vacationDaysInMoth < 0) throw new IllegalArgumentException("The Vacation days in month should be 0 or more!");
+		else if(missedDays < 0) throw new IllegalArgumentException("The Missed days in month should be 0 or more!");
+		else if(sumOfSickAndVacationAndMissedDays > generalWorkigDaysInMoth) throw new IllegalArgumentException("The Sum of Vacation days, Sickdays and Missed days should be less or equals than General Working days in month!");
+		
+		return generalWorkigDaysInMoth - sickDaysInMonth - vacationDaysInMoth- missedDays;
 	}
 
-	public double calculateSalary(double salaryRate, double bonus, int sickDays,  int generalWorkigDaysInMoth,
-			int realWorkigDaysInMoth,  int vacationDays)
+	public double calculateSalary(double salaryRate, double bonus, int sickDaysInMonth,  int generalWorkigDaysInMoth,
+			int realWorkigDaysInMoth,  int vacationDaysInMoth, int experience, int missedDays)
 	{
-		return calculateOneDayCost(salaryRate, generalWorkigDaysInMoth) * countRealWorkigDays(generalWorkigDaysInMoth, sickDays, vacationDays) +  calculeteBonus();
+		return calculateOneDayCost(salaryRate, generalWorkigDaysInMoth) * countRealWorkigDays(generalWorkigDaysInMoth, sickDaysInMonth, vacationDaysInMoth, missedDays) +  calculeteBonus(salaryRate, experience);
 	}
 }
+
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////
+// This Method round decimal number. For example: 10.12345 -> 10.123				//
+// than we can use:  roundDoubleDigit(10.12345, 3);  --> 10.123						//
+protected static double roundDoubleDigit(double value, int place)					//
+{																					//
+int places = 0;																		//
+if (places < 0) throw new IllegalArgumentException();								//																					
+long factor = (long) Math.pow(10, places);											//
+value = value * factor;																//	
+long tmp = Math.round(value);														//
+return (double) tmp / factor;														//
+}																					//
+//////////////////////////////////////////////////////////////////////////////////////
+*/
