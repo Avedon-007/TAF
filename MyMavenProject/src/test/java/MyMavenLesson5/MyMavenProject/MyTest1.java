@@ -6,6 +6,10 @@ import org.junit.Test;
 
 public class MyTest1 {
 
+	//@Before Class
+	// написать инстанс класс(EmployeeOfCompany testInstance = new EmployeeOfCompany();	) как атрибут 
+	
+	
 	@Test
 	public void testExceptionIsThrownInCalculateOneDayCostClass()
 	{
@@ -52,8 +56,9 @@ public class MyTest1 {
 	@Test
 	public void testCalculeteBonus()
 	{
+		// Will use:   assertEquals(double, double, tolerance)  - if tolerance 0.2 , so e.g. 14.5 -> 14.4 & 14.6  (0.2 means +-0.1)
 		EmployeeOfCompany testInstance = new EmployeeOfCompany();
-		assertEquals("Bonus for Employee if SalaryRate 2250 and Expieiance 5 years should be 562.2", 562.5, testInstance.calculeteBonus(2250, 5), 2);
+		assertEquals("Bonus for Employee if SalaryRate 2250 and Expieiance 5 years should be 562.5! -> ", 562.5, testInstance.calculeteBonus(2250.0, 5), 0.0);
 	}
 	
 	@Test

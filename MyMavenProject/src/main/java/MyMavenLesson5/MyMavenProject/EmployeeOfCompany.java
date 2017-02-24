@@ -76,24 +76,24 @@ public class EmployeeOfCompany
 	
 	public double calculateOneDayCost(double salaryRate, int generalWorkigDaysInMoth)
 	{
-		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0!");
+		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0! ");
 		
 		return salaryRate/generalWorkigDaysInMoth;
 	}	
 	
-	public double calculateExperianceCoeff(int experience)
+	public double calculateExperianceCoeff(double experience)
 	{
 		double experianceCoeff = 0.0;
 		if(experience >= 9) experianceCoeff = 0.9;
 		else if(experience >= 0 && experience < 9)	experianceCoeff = experience/10;		 
-		else throw new IllegalArgumentException("ERROR!!! experience value is less 0");
+		else throw new IllegalArgumentException("ERROR!!! 'experience' value is less 0! ");
 		
 		return experianceCoeff;
 	}
 		
-	public double calculeteBonus(double salaryRate, int experience)
+	public double calculeteBonus(double salaryRate, double experience)
 	{
-		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0!");
+		if(salaryRate <= 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0! ");
 		
 		return (salaryRate * 0.5) * calculateExperianceCoeff(experience);
 	}
@@ -101,12 +101,12 @@ public class EmployeeOfCompany
 	public int countRealWorkigDays(int generalWorkigDaysInMoth, int sickDaysInMonth, int vacationDaysInMoth, int missedDays) 
 	{
 		int sumOfSickAndVacationAndMissedDays = sickDaysInMonth + vacationDaysInMoth + missedDays;
-		if(generalWorkigDaysInMoth <= 0) throw new IllegalArgumentException("The General working days in month should be more than 0!");
-		else if(generalWorkigDaysInMoth >= 24) throw new IllegalArgumentException("The General working days in month should be less than 24!");
-		else if(sickDaysInMonth < 0) throw new IllegalArgumentException("The Sickdays in month should be 0 or more!");
-		else if(vacationDaysInMoth < 0) throw new IllegalArgumentException("The Vacation days in month should be 0 or more!");
-		else if(missedDays < 0) throw new IllegalArgumentException("The Missed days in month should be 0 or more!");
-		else if(sumOfSickAndVacationAndMissedDays > generalWorkigDaysInMoth) throw new IllegalArgumentException("The Sum of Vacation days, Sickdays and Missed days should be less or equals than General Working days in month!");
+		if(generalWorkigDaysInMoth <= 0) throw new IllegalArgumentException("The General working days in month should be more than 0! ");
+		else if(generalWorkigDaysInMoth >= 24) throw new IllegalArgumentException("The General working days in month should be less than 24! ");
+		else if(sickDaysInMonth < 0) throw new IllegalArgumentException("The Sickdays in month should be 0 or more! ");
+		else if(vacationDaysInMoth < 0) throw new IllegalArgumentException("The Vacation days in month should be 0 or more! ");
+		else if(missedDays < 0) throw new IllegalArgumentException("The Missed days in month should be 0 or more! ");
+		else if(sumOfSickAndVacationAndMissedDays > generalWorkigDaysInMoth) throw new IllegalArgumentException("The Sum of Vacation days, Sickdays and Missed days should be less or equals than General Working days in month! ");
 		
 		return generalWorkigDaysInMoth - sickDaysInMonth - vacationDaysInMoth- missedDays;
 	}
