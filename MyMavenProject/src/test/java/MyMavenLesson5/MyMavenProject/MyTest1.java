@@ -10,7 +10,7 @@ public class MyTest1 {
 	// написать инстанс класс(EmployeeOfCompany testInstance = new EmployeeOfCompany();	) как атрибут 
 	
 	
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculateOneDayCostClass()
 	{
 		EmployeeOfCompany testInstance = new EmployeeOfCompany();
@@ -44,7 +44,7 @@ public class MyTest1 {
 		assertEquals("Expiriance coefficient for 8 years of expiriance should be 0.8", 0.8, testInstance.calculateExperianceCoeff(8), 2);
 	}
 	
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculateExperianceCoeffClass()
 	{
 		EmployeeOfCompany testInstance = new EmployeeOfCompany();
@@ -61,7 +61,7 @@ public class MyTest1 {
 		assertEquals("Bonus for Employee if SalaryRate 2250 and Expieiance 5 years should be 562.5! -> ", 562.5, testInstance.calculeteBonus(2250.0, 5), 0.0);
 	}
 	
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculeteBonusClass()
 	{
 		EmployeeOfCompany testInstance = new EmployeeOfCompany();
@@ -87,7 +87,7 @@ public class MyTest1 {
 		assertEquals("Real working days should be 0 if the Working days in month 22, Sickdays 10, Vacations days 10 and Missed days 2", 0, testInstance.countRealWorkigDays(22, 10, 10, 2));
 	}
 	
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCountRealWorkigDaysClass()
 	{
 		EmployeeOfCompany testInstance = new EmployeeOfCompany();
