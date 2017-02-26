@@ -1,4 +1,4 @@
-package MyMavenLesson5.MyMavenProject;
+package FrameworkOfLesson4.MyMavenProjectTestNG;
 
 import org.apache.poi.hssf.record.PrecisionRecord;
 
