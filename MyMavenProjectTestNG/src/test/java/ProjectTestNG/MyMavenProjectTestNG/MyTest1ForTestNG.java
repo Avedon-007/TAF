@@ -1,15 +1,8 @@
 package ProjectTestNG.MyMavenProjectTestNG;
 
 import static org.testng.AssertJUnit.assertEquals;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-
-
-
-
-
 
 public class MyTest1ForTestNG 
 {
@@ -19,8 +12,7 @@ public class MyTest1ForTestNG
 	{
 		testInstance = new EmployeeOfCompany();
 	}
-	
-	
+		
 	@Test(expectedExceptions = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculateOneDayCostClass()
 	{
@@ -35,9 +27,7 @@ public class MyTest1ForTestNG
 		assertEquals(102.2727, testInstance.calculateOneDayCost(2250, 22), 0.02);
 		assertEquals("2200/22 must be 100.00", 100.00,
 				testInstance.calculateOneDayCost(2200, 22), 2);
-	}
-		
-	
+	}		
 	
 	@Test
 	public void testCalculateExperianceCoeffIfExpirianceMore10Years()
@@ -67,8 +57,7 @@ public class MyTest1ForTestNG
 		testInstance.calculateExperianceCoeff(0);
 		testInstance.calculateExperianceCoeff(-1);
 	}
-	
-	
+		
 	@Test
 	public void testCalculeteBonus()
 	{
@@ -85,8 +74,7 @@ public class MyTest1ForTestNG
 		testInstance.calculeteBonus(-1, 5);
 		testInstance.calculeteBonus(0, -1);
 		testInstance.calculeteBonus(-1, -1);
-	}
-	
+	}	
 	
 	@Test
 	public void testCountRealWorkigDays()
@@ -129,6 +117,5 @@ public class MyTest1ForTestNG
 		testInstance.countRealWorkigDays(20, 0, -1, 0);
 		testInstance.countRealWorkigDays(20, 0, 0, -1);
 		testInstance.countRealWorkigDays(20, 10, 9, 1);
-	}
-	
+	}	
 }
