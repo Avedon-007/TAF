@@ -1,8 +1,6 @@
 package ProjectTestNG.MyMavenProjectTestNG;
 
 
-import org.apache.poi.hssf.record.PrecisionRecord;
-
 public class EmployeeOfCompany 
 {
 	private String firstName;
