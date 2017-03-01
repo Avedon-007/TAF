@@ -24,7 +24,8 @@
     
   </dependencies>
   
-  <reporting>
+ <build>
+  
   <plugins>   
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -32,6 +33,7 @@
         <version>2.19.1</version>      
       </plugin>  
   </plugins>
- </reporting>
+
+ </build>
   
 </project>
