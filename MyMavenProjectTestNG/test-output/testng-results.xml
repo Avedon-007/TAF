@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34" started-at="2017-02-26T21:50:06Z" finished-at="2017-02-26T21:50:06Z">
+  <suite name="Default suite" duration-ms="42" started-at="2017-02-28T12:21:43Z" finished-at="2017-02-28T12:21:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34" started-at="2017-02-26T21:50:06Z" finished-at="2017-02-26T21:50:06Z">
+    <test name="Default test" duration-ms="42" started-at="2017-02-28T12:21:43Z" finished-at="2017-02-28T12:21:43Z">
       <class name="ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG">
-        <test-method status="PASS" signature="initializeInstanceOfClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="initializeInstanceOfClass" is-config="true" duration-ms="6" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="initializeInstanceOfClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="initializeInstanceOfClass" is-config="true" duration-ms="6" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeInstanceOfClass -->
-        <test-method status="PASS" signature="testCalculateExperianceCoeffIfExpirianceLess9Years()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculateExperianceCoeffIfExpirianceLess9Years" duration-ms="4" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testCalculateExperianceCoeffIfExpirianceLess9Years()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculateExperianceCoeffIfExpirianceLess9Years" duration-ms="4" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculateExperianceCoeffIfExpirianceLess9Years -->
-        <test-method status="PASS" signature="testCalculateExperianceCoeffIfExpirianceMore10Years()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculateExperianceCoeffIfExpirianceMore10Years" duration-ms="1" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testCalculateExperianceCoeffIfExpirianceMore10Years()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculateExperianceCoeffIfExpirianceMore10Years" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculateExperianceCoeffIfExpirianceMore10Years -->
-        <test-method status="PASS" signature="testCalculateOneDayCost()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculateOneDayCost" duration-ms="0" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testCalculateOneDayCost()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculateOneDayCost" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculateOneDayCost -->
-        <test-method status="PASS" signature="testCalculeteBonus()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculeteBonus" duration-ms="1" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testCalculeteBonus()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCalculeteBonus" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculeteBonus -->
-        <test-method status="PASS" signature="testCountRealWorkigDays()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCountRealWorkigDays" duration-ms="0" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testCountRealWorkigDays()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testCountRealWorkigDays" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCountRealWorkigDays -->
-        <test-method status="PASS" signature="testExceptionIsThrownInCalculateExperianceCoeffClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCalculateExperianceCoeffClass" duration-ms="1" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testExceptionIsThrownInCalculateExperianceCoeffClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCalculateExperianceCoeffClass" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[ERROR!!! 'experience' value is less 0! ]]>
@@ -39,7 +39,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: ERROR!!! 'experience' value is less 0! 
 	at ProjectTestNG.MyMavenProjectTestNG.EmployeeOfCompany.calculateExperianceCoeff(EmployeeOfCompany.java:88)
-	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCalculateExperianceCoeffClass(MyTest1ForTestNG.java:68)
+	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCalculateExperianceCoeffClass(MyTest1ForTestNG.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExceptionIsThrownInCalculateExperianceCoeffClass -->
-        <test-method status="PASS" signature="testExceptionIsThrownInCalculateOneDayCostClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCalculateOneDayCostClass" duration-ms="1" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testExceptionIsThrownInCalculateOneDayCostClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCalculateOneDayCostClass" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA['SalaryRate' should be more than 0 and 'generalWorkigDaysInMoth' should be 0 or more! ]]>
@@ -79,7 +79,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: 'SalaryRate' should be more than 0 and 'generalWorkigDaysInMoth' should be 0 or more! 
 	at ProjectTestNG.MyMavenProjectTestNG.EmployeeOfCompany.calculateOneDayCost(EmployeeOfCompany.java:78)
-	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCalculateOneDayCostClass(MyTest1ForTestNG.java:28)
+	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCalculateOneDayCostClass(MyTest1ForTestNG.java:20)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -111,7 +111,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExceptionIsThrownInCalculateOneDayCostClass -->
-        <test-method status="PASS" signature="testExceptionIsThrownInCalculeteBonusClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCalculeteBonusClass" duration-ms="1" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testExceptionIsThrownInCalculeteBonusClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCalculeteBonusClass" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA['SalaryRate' should be more than 0! ]]>
@@ -119,7 +119,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: 'SalaryRate' should be more than 0! 
 	at ProjectTestNG.MyMavenProjectTestNG.EmployeeOfCompany.calculeteBonus(EmployeeOfCompany.java:95)
-	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCalculeteBonusClass(MyTest1ForTestNG.java:84)
+	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCalculeteBonusClass(MyTest1ForTestNG.java:73)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -151,7 +151,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExceptionIsThrownInCalculeteBonusClass -->
-        <test-method status="PASS" signature="testExceptionIsThrownInCountRealWorkigDaysClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCountRealWorkigDaysClass" duration-ms="0" started-at="2017-02-26T23:50:06Z" finished-at="2017-02-26T23:50:06Z">
+        <test-method status="PASS" signature="testExceptionIsThrownInCountRealWorkigDaysClass()[pri:0, instance:ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG@3a82f6ef]" name="testExceptionIsThrownInCountRealWorkigDaysClass" duration-ms="1" started-at="2017-02-28T14:21:43Z" finished-at="2017-02-28T14:21:43Z">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[The General working days in month should be more than 0! ]]>
@@ -159,7 +159,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: The General working days in month should be more than 0! 
 	at ProjectTestNG.MyMavenProjectTestNG.EmployeeOfCompany.countRealWorkigDays(EmployeeOfCompany.java:103)
-	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCountRealWorkigDaysClass(MyTest1ForTestNG.java:126)
+	at ProjectTestNG.MyMavenProjectTestNG.MyTest1ForTestNG.testExceptionIsThrownInCountRealWorkigDaysClass(MyTest1ForTestNG.java:114)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
