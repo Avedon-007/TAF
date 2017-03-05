@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class MyTest1 
+public class TestMyTest1 
 {
 	static EmployeeOfCompany testInstance;
 	@BeforeClass
