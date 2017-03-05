@@ -4,7 +4,7 @@ import static org.testng.AssertJUnit.assertEquals;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class MyTest1ForTestNG 
+public class TestMyTest1ForTestNG 
 {
 	static EmployeeOfCompany testInstance;
 	@BeforeClass
