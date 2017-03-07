@@ -73,7 +73,7 @@ public class EmployeeOfCompany
 		this.position = position;
 	}
 	
-	public double calculateOneDayCost(double salaryRate, int generalWorkigDaysInMoth)
+	public double calculateOneDayCost(double salaryRate, double generalWorkigDaysInMoth)
 	{
 		if(salaryRate <= 0 || generalWorkigDaysInMoth < 0) throw new IllegalArgumentException("'SalaryRate' should be more than 0 and 'generalWorkigDaysInMoth' should be 0 or more! ");
 		

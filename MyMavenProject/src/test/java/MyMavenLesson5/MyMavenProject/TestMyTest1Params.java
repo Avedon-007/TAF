@@ -1,49 +1,86 @@
 package MyMavenLesson5.MyMavenProject;
 
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
-public class TestMyTest1 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
+
+import java.util.List;
+
+import org.junit.BeforeClass;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+
+
+//@RunWith(Parameterized.class)
+public class TestMyTest1Params 
 {
-	static EmployeeOfCompany testInstance;
+	private double salaryRate;
+	private int generalWorkigDaysInMoth;	
+	
+	private static List <double[]> dataSet = new ArrayList<double[]>();
+	private static EmployeeOfCompany testInstance;
+	
 	@BeforeClass
 	public static void initializeInstanceOfClass()
 	{
-		testInstance = new EmployeeOfCompany();
-	}
-	
-	
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testExceptionIsThrownInCalculateOneDayCostClass()
-	{
-		//EmployeeOfCompany testInstance = new EmployeeOfCompany(); // See the @BeforClass
-		testInstance.calculateOneDayCost(0, 22);
-		testInstance.calculateOneDayCost(-1, 22);
-	}
+		testInstance = new EmployeeOfCompany();		
 		
+		dataSet.add(new double[] {102.2727, 2250.0, 22.0, 0.02});
+		dataSet.add(new double[] {100.00, 2200.0, 22.0, 0.0});
+		
+	}
+	
+	
+	
+		
+//	public TestMyTest1Params(double salaryRate, int generalWorkigDaysInMoth)
+//	{
+//		this.salaryRate = salaryRate;
+//		this.generalWorkigDaysInMoth = generalWorkigDaysInMoth;
+//	}
+	
+//	@Parameterized.Parameters
+//	public static Collection forTestExceptionIsThrownInCalculateOneDayCostClass()
+//	{
+//		return Arrays.asList(new Object[][]{ {0, 22}, {-1, 22} });
+//	}
+//		
+//	// Two methods of handling Exceptions: @Rule and Annotations
+//	@Rule
+//	public ExpectedException thrown = ExpectedException.none();
+//	
+////	@Test
+////	public void testExceptionIsThrownInCalculateOneDayCostClass()
+////	{
+////		thrown.expect(IllegalArgumentException.class);
+////		testInstance.calculateOneDayCost(salaryRate, generalWorkigDaysInMoth);		
+////	}	
+	
 	@Test
 	public void testCalculateOneDayCost() 
 	{
-		//EmployeeOfCompany testInstance = new EmployeeOfCompany();	// See the @BeforClass
-		assertEquals("2250/22 must be 102.2727", 102.2727,
-				testInstance.calculateOneDayCost(2250, 22), 0.02); //tolerance 0.02 (use tolerance coz DOUBLE Method)
-		assertEquals("2200/22 must be 100.00", 100.00,
-				testInstance.calculateOneDayCost(2200, 22), 0.0);
+		for (double[] buferArry : dataSet)
+		{				
+				assertEquals("2250/22 must be 102.2727", buferArry[0],
+				testInstance.calculateOneDayCost(buferArry[1], buferArry[2]), buferArry[3]);
+		}
 	}
-		
-	
+			
 	
 	@Test
 	public void testCalculateExperianceCoeffIfExpirianceMore10Years()
 	{		
 		assertEquals(
 				"Expiriance coefficient for 9 years of expiriance should be 0.9",
-				0.9, testInstance.calculateExperianceCoeff(9), 0);
-		assertEquals(
-				"Expiriance coefficient for 10 years of expiriance should be 0.9",
-				0.9, testInstance.calculateExperianceCoeff(10), 0);
+				0.9, testInstance.calculateExperianceCoeff(9), 0);		//tolerance 0 (use tolerance coz DOUBLE Method)
 	}
 
 	@Test
@@ -57,12 +94,26 @@ public class TestMyTest1
 				0.8, testInstance.calculateExperianceCoeff(8), 0);
 	}
 	
+	
+	
+	
+	
+	
+	
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculateExperianceCoeffClass()
 	{		
-		
-		testInstance.calculateExperianceCoeff(-1);
+		testInstance.calculateExperianceCoeff(-1);		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	@Test
