@@ -13,7 +13,8 @@ import ProjectTestNG.MyMavenProjectTestNG.EmployeeOfCompany;
 public class GroupOfTestMethods 
 {
 	static EmployeeOfCompany testInstance;
-	@BeforeClass
+	
+	@BeforeClass (alwaysRun = true)
 	public static void initializeInstanceOfClass()
 	{
 		testInstance = new EmployeeOfCompany();

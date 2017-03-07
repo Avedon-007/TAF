@@ -25,7 +25,9 @@ public class TestMyTest1Params
 	private double salaryRate;
 	private int generalWorkigDaysInMoth;	
 	
-	private static List <double[]> dataSet = new ArrayList<double[]>();
+	private static List <double[]> dataSet1 = new ArrayList<double[]>();
+	private static List <double[]> dataSet2 = new ArrayList<double[]>();
+	private static List <double[]> dataSet3 = new ArrayList<double[]>();
 	private static EmployeeOfCompany testInstance;
 	
 	@BeforeClass
@@ -33,8 +35,17 @@ public class TestMyTest1Params
 	{
 		testInstance = new EmployeeOfCompany();		
 		
-		dataSet.add(new double[] {102.2727, 2250.0, 22.0, 0.02});
-		dataSet.add(new double[] {100.00, 2200.0, 22.0, 0.0});
+		dataSet1.add(new double[] {102.2727, 2250.0, 22.0, 0.02});
+		dataSet1.add(new double[] {100.00, 2200.0, 22.0, 0.0});
+		
+		dataSet2.add(new double[] {0.9, 9, 0.0});
+		dataSet2.add(new double[] {0.9, 10, 0.0});
+		dataSet2.add(new double[] {0.9, 11, 0.0});
+		
+		dataSet3.add(new double[] {0.0, 0, 0.0});
+		dataSet3.add(new double[] {0.1, 1, 0.0});
+		dataSet3.add(new double[] {0.7, 7, 0.0});
+		dataSet3.add(new double[] {0.8, 8, 0.0});
 		
 	}
 	
@@ -67,7 +78,7 @@ public class TestMyTest1Params
 	@Test
 	public void testCalculateOneDayCost() 
 	{
-		for (double[] buferArry : dataSet)
+		for (double[] buferArry : dataSet1)
 		{				
 				assertEquals("2250/22 must be 102.2727", buferArry[0],
 				testInstance.calculateOneDayCost(buferArry[1], buferArry[2]), buferArry[3]);
@@ -76,22 +87,25 @@ public class TestMyTest1Params
 			
 	
 	@Test
-	public void testCalculateExperianceCoeffIfExpirianceMore10Years()
+	public void testCalculateExperianceCoeffIfExpirianceMore9Years()
 	{		
+		for (double[] buferArry : dataSet2)
+		{
 		assertEquals(
 				"Expiriance coefficient for 9 years of expiriance should be 0.9",
-				0.9, testInstance.calculateExperianceCoeff(9), 0);		//tolerance 0 (use tolerance coz DOUBLE Method)
+				buferArry[0], testInstance.calculateExperianceCoeff(buferArry[1]), buferArry[2]);		//tolerance 0 (use tolerance coz DOUBLE Method)
+		}
 	}
 
 	@Test
 	public void testCalculateExperianceCoeffIfExpirianceLess9Years()
 	{		
+		for (double[] buferArry : dataSet3)
+		{
 		assertEquals(
 				"Expiriance coefficient for 1 years of expiriance should be 0.1",
-				0.1, testInstance.calculateExperianceCoeff(1), 0);
-		assertEquals(
-				"Expiriance coefficient for 8 years of expiriance should be 0.8",
-				0.8, testInstance.calculateExperianceCoeff(8), 0);
+				buferArry[0], testInstance.calculateExperianceCoeff(buferArry[1]), buferArry[2]);
+		}
 	}
 	
 	
@@ -103,8 +117,12 @@ public class TestMyTest1Params
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculateExperianceCoeffClass()
-	{		
-		testInstance.calculateExperianceCoeff(-1);		
+	{	
+		int[] dataSet2 = {-1, 2, -3};		// проверка не валидна
+		for (int i = 0; i < dataSet2.length; i++)
+		{
+			assertEquals(IllegalArgumentException.class, testInstance.calculateExperianceCoeff(dataSet2[i]));	
+		}
 	}
 	
 	
