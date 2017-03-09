@@ -18,7 +18,7 @@ public class TestMyTest1ForTestNG
 	{
 		//EmployeeOfCompany testInstance = new EmployeeOfCompany(); // See the @BeforClass
 		testInstance.calculateOneDayCost(0, 22);
-		testInstance.calculateOneDayCost(-1, 22);	<< не детектед, если есть не превалиные данные (только в проверки Эксепшена)
+		testInstance.calculateOneDayCost(-1, 22);	//<< не детектед, если есть не превалиные данные (только в проверки Эксепшена)
 	}
 		
 	@Test
@@ -54,7 +54,7 @@ public class TestMyTest1ForTestNG
 	@Test(expectedExceptions = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculateExperianceCoeffClass()
 	{		
-		testInstance.calculateExperianceCoeff(0);	<< не детектед, если есть не превалиные данные (только в проверки Эксепшена)
+		testInstance.calculateExperianceCoeff(0);	//<< не детектед, если есть не превалиные данные (только в проверки Эксепшена)
 		testInstance.calculateExperianceCoeff(-1);
 	}
 		
@@ -70,7 +70,7 @@ public class TestMyTest1ForTestNG
 	@Test(expectedExceptions = IllegalArgumentException.class)
 	public void testExceptionIsThrownInCalculeteBonusClass()
 	{		
-		testInstance.calculeteBonus(0, 5);		<< не детектед, если есть не превалиные данные (только в проверки Эксепшена)
+		testInstance.calculeteBonus(0, 5);	//	<< не детектед, если есть не превалиные данные (только в проверки Эксепшена)
 		testInstance.calculeteBonus(-1, 5);
 		testInstance.calculeteBonus(0, -1);
 		testInstance.calculeteBonus(-1, -1);
