@@ -9,11 +9,12 @@ import ProjectTestNG.MyMavenProjectTestNG.EmployeeOfCompany;
 
 
 
-@Test(dependsOnGroups = {"exepGroupClass.*"})
-public class TestOfGroups3TestNG extends GroupOfTestMethods
+@Test(groups = {"testLogicGroupClass.*"})
+public class TestOfGroups3TestNG
 {
 	static EmployeeOfCompany testInstance;
-	@BeforeClass
+	
+	@BeforeClass (alwaysRun = true)
 	public static void initializeInstanceOfClass()
 	{
 		testInstance = new EmployeeOfCompany();

@@ -1,16 +1,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "TestAllTestNGSuite">
-	<test name = "">
-		<groups>
-			<run>
-				<include name="">				
-				</include>
-			</run>
-		</groups>
+<!-- Tutorial: https://www.mkyong.com/unittest/testng-groups-example/ -->
+
+
+<suite name = "Group Of Test Methods">
+	<test name = "exepGroupClass Test"   preserve-order="false">
+<!-- 		<groups> -->
+<!-- 			<run> -->
+<!-- 				<include name="exceptionsGroupClass">				 -->
+<!-- 				<include name="testLogicGroupClass"> -->
+<!-- 				</include> -->
+<!-- 			</run> -->
+<!-- 		</groups> -->
 		<classes>
-			<class name="">			
-			</class>
+			<class name="ProjectTestNG.MyMavenProjectTestNG.GroupTestForClass.GroupOfTestMethods" />
+			<class name="ProjectTestNG.MyMavenProjectTestNG.GroupTestForClass.TestOfGroups3TestNG" />					
 		</classes>
 	</test>
 </suite>

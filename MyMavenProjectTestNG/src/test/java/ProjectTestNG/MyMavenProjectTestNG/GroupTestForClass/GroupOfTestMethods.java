@@ -4,12 +4,13 @@ package ProjectTestNG.MyMavenProjectTestNG.GroupTestForClass;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import ProjectTestNG.MyMavenProjectTestNG.EmployeeOfCompany;
 
 
 
 
-@Test(groups = "exepGroupClass")
+@Test(groups = "exceptionsGroupClass", expectedExceptions = IllegalArgumentException.class)
 public class GroupOfTestMethods 
 {
 	static EmployeeOfCompany testInstance;
