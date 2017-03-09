@@ -3,7 +3,7 @@
 <!-- Tutorial: https://www.mkyong.com/unittest/testng-groups-example/ -->
 
 
-<suite name = "Group Of Test Methods">
+<suite name = "Group Of Test Methods" verbose="1">
 	<test name = "exepGroupClass Test"   preserve-order="false">
 <!-- 		<groups> -->
 <!-- 			<run> -->
