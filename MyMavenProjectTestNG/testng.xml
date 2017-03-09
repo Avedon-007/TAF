@@ -13,8 +13,8 @@
 <!-- 			</run> -->
 <!-- 		</groups> -->
 		<classes>
-			<class name="GroupOfTestMethods.GroupOfTestMethods" />
-			<class name="TestOfGroups3TestNG.TestOfGroups3TestNG" />					
+			<class name="ProjectTestNG.MyMavenProjectTestNG.GroupTestForClass.GroupOfTestMethods" />
+			<class name="ProjectTestNG.MyMavenProjectTestNG.GroupTestForClass.TestOfGroups3TestNG" />					
 		</classes>
 	</test>
 </suite>
