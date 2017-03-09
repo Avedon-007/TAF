@@ -17,15 +17,22 @@ public class TestMyTest1 {
 	// несколько наборов данных в одном методе, то проверка не валидна (если
 	// хоть один набор данных удовлетворяет проверку - проверка проходит)
 
-	@Test(expected = IllegalArgumentException.class)
-	public void testExceptionIsThrownInCalculateOneDayCostClass1() {
-		// EmployeeOfCompany testInstance = new EmployeeOfCompany(); // See the
-		// @BeforClass
+	@Test
+	public void testExceptionIsThrownInCalculateOneDayCostClass1() 
+	{		
+		//убрать аннотацию expected = IllegalArgumentException.class, чтобы тест падал
+		//предлагаю считать тест успешным если он упал
+		// тест Fail если он не упал
+		//Тогда в одном методе можно проверять несколько наборов данных
 		testInstance.calculateOneDayCost(0, 22);
+		testInstance.calculateOneDayCost(-1, 22);
+		testInstance.calculateOneDayCost(0, -1);
+		testInstance.calculateOneDayCost(1, -1);		
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testExceptionIsThrownInCalculateOneDayCostClass2() {
+	public void testExceptionIsThrownInCalculateOneDayCostClass2() 
+	{
 		testInstance.calculateOneDayCost(-1, 22);
 	}
 
